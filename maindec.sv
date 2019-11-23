@@ -5,8 +5,7 @@ output logic regdst, regwrite,
 output logic jump,
 output logic [1:0] aluop);
 logic [8:0] controls;
-assign {regwrite, regdst, alusrc, branch, memwrite,
-memtoreg, jump, aluop} = controls;
+assign {regwrite, regdst, alusrc, branch, memwrite, memtoreg, jump, aluop} = controls;
 always_comb
     case(op)
     6'b000000: controls <= 9'b110000010; // RTYPE
