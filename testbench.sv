@@ -19,20 +19,9 @@ module testbench();
     always @(negedge clk)
     begin
         if (memwrite) begin
-            //if (dataadr===25) begin
                 $display("Simulation succeeded");
                 $stop;
-            //end 
-           // else if (dataadr !==25) begin
-            ///    $display("Simulation failed");
-            //$stop;
-           // end
         end
     end
-/*	initial begin
-		$shm_open("shm.db",1);
-		$shm_probe("AS");
-		#40 $finish;
-		#80 $shm_close();
-	end */
+
 endmodule
